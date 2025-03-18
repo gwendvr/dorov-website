@@ -1,0 +1,450 @@
+:root {
+    --primary-color: #2a2a2a;
+    --secondary-color: #4a4a4a;
+    --accent-color: #ff4444;
+    --text-color: #ffffff;
+    --font-main: 'Roboto', sans-serif;
+    --font-title: 'Creepster', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: rgba(42, 42, 42, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.hero {
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.section {
+    padding: 5rem 2rem;
+}
+
+.section h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.characters-grid, .gallery-grid, .platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--accent-color);
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    padding: 4rem 2rem 2rem;
+    color: var(--text-color);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--accent-color);
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-legal a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--accent-color);
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* Styles pour les pages légales */
+.legal-content {
+    max-width: 800px;
+    margin: 120px auto 40px;
+    padding: 0 20px;
+}
+
+.legal-content h1 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.legal-section {
+    margin-bottom: 2rem;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.legal-section h2 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.legal-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.legal-section ul {
+    list-style: disc;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.legal-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .legal-content {
+        margin-top: 100px;
+    }
+
+    .legal-content h1 {
+        font-size: 2rem;
+    }
+
+    .legal-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Section Histoire */
+.histoire-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-text {
+    flex: 1;
+    max-width: 800px;
+}
+
+.intro-image {
+    flex: 1;
+    position: relative;
+}
+
+.ambiance-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.tagline-dark {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #e0e0e0;
+    line-height: 1.8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 2rem;
+    border-left: 4px solid #ff4444;
+    border-right: 4px solid #ff4444;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.tagline-dark::before,
+.tagline-dark::after {
+    content: '"';
+    color: #ff4444;
+    font-size: 3rem;
+    position: absolute;
+}
+
+.tagline-dark::before {
+    left: 0.5rem;
+    top: -0.5rem;
+}
+
+.tagline-dark::after {
+    right: 0.5rem;
+    bottom: -1.5rem;
+}
+
+.histoire-block {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.histoire-block h3 {
+    color: #ff4444;
+    font-family: 'Creepster', cursive;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+}
+
+.quote-block {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-left: 4px solid #ff4444;
+    background: rgba(255, 68, 68, 0.1);
+}
+
+.quote-block blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.quote-block cite {
+    display: block;
+    margin-top: 1rem;
+    color: #ff4444;
+    font-style: normal;
+}
+
+/* Media Queries pour la section Histoire */
+@media (max-width: 768px) {
+    .histoire-intro {
+        flex-direction: column;
+    }
+
+    .intro-text, .intro-image {
+        width: 100%;
+    }
+
+    .histoire-block {
+        padding: 1.5rem;
+    }
+
+    .tagline-dark {
+        font-size: 1.2rem;
+    }
+
+    .quote-block {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+
+    .quote-block blockquote {
+        font-size: 1.1rem;
+    }
+} 

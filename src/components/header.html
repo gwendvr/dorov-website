@@ -1,0 +1,15 @@
+<nav class="navbar" x-data="{ isOpen: false }">
+    <div class="logo">DOROV</div>
+    <button class="mobile-menu-btn" @click="isOpen = !isOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-links" :class="{ 'active': isOpen }">
+        <li><a href="../pages/index.html#accueil">Accueil</a></li>
+        <li><a href="../pages/index.html#histoire">Histoire</a></li>
+        <li><a href="../pages/index.html#personnages">Personnages</a></li>
+        <li><a href="../pages/index.html#galerie">Galerie</a></li>
+        <li><a href="../pages/index.html#plateformes">Plateformes</a></li>
+    </ul>
+</nav> 
