@@ -33,9 +33,19 @@ body {
 }
 
 .logo {
-    font-family: var(--font-title);
-    font-size: 2rem;
-    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px;
+    }
 }
 
 .nav-links {

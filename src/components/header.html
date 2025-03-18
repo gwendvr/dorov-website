@@ -1,5 +1,7 @@
 <nav class="navbar" x-data="{ isOpen: false }" @click.away="isOpen = false">
-    <div class="logo">DOROV</div>
+    <div class="logo">
+        <img src="../assets/images/logo.png" alt="DOROV" />
+    </div>
     <button class="mobile-menu-btn" :class="{ 'active': isOpen }" @click="isOpen = !isOpen" aria-label="Menu">
         <span></span>
         <span></span>
