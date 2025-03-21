@@ -98,6 +98,13 @@ body {
     color: var(--accent-color);
 }
 
+.cta-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
@@ -517,5 +524,93 @@ footer {
 
     .mobile-menu-btn.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+/* Styles pour les cartes de personnages */
+.personnages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.personnage-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.personnage-card:hover {
+    transform: translateY(-5px);
+}
+
+.personnage-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.personnage-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.personnage-card:hover .personnage-image img {
+    transform: scale(1.05);
+}
+
+.personnage-info {
+    padding: 1.5rem;
+}
+
+.personnage-info h3 {
+    color: var(--accent-color);
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.surnom {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.info-block {
+    margin-bottom: 1.5rem;
+}
+
+.info-block h4 {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-block p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .personnages-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .personnage-image {
+        height: 250px;
+    }
+
+    .personnage-info {
+        padding: 1rem;
+    }
+
+    .personnage-info h3 {
+        font-size: 1.5rem;
     }
 } 
